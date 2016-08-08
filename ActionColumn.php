@@ -223,7 +223,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                     'pjax' => $pjax,
                     'pjaxContainer' => $pjaxContainer,
                     'lib' => ArrayHelper::getValue($this->grid->krajeeDialogSettings, 'libName', 'krajeeDialog'),
-                    'msg' => Yii::t('kvgrid', 'Are you sure to delete this item?')
+                    'msg' => Yii::t('kvgrid', $this->deleteOptions['msg'])
                 ]);
                 ActionColumnAsset::register($view);
                 $js = "kvActionDelete({$delOpts});";
